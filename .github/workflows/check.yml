@@ -1,9 +1,10 @@
 name: check
 on: push
 jobs:
-  runs-on: ubuntu-latest
-  steps: 
-    -name: Get code
-      uses: actions/checkout@v4
-    -name: Install dep
-      uses: npm install
+  checkout_repo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v3
+      - name: inst dep
+        run: npm install
