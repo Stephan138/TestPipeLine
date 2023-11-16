@@ -1,6 +1,8 @@
 name: check
 on: push
 
+jobs:
+
   checkout_repo:
       runs-on: ubuntu-latest
       steps:
