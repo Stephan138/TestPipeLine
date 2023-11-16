@@ -9,13 +9,12 @@ jobs:
     strategy:
       matrix:
         dotnet-version: [ '3.1.x', '6.0.x' ]
-
     steps:
       - uses: actions/checkout@v4
-      - name: Setup dotnet
+      - name: Setup dotnet ${{ matrix.dotnet-version }}
         uses: actions/setup-dotnet@v3
         with:
-          dotnet-version: '6.0.x'
+          dotnet-version: ${{ matrix.dotnet-version }}
       - name: Install dependencies
         run: dotnet restore
       - name: Build
