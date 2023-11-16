@@ -19,4 +19,4 @@ jobs:
       - name: Test with the dotnet CLI
         run: dotnet test
       - name: lint app
-        run: npm run lint
+        uses: github/super-linter@v4
