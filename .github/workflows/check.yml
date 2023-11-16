@@ -6,7 +6,5 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v3
-      - name: inst dep
-        run: npm ci
       - name: test
         run: npm run test
